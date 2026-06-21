@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  /* Color tokens — warm paper background, moss-green primary, clay terracotta accent */
+  --color-paper: #f7f4ee;
+  --color-ink: #2b2a28;
+  --color-ink-soft: #5c5a52;
+  --color-moss: #5c6b4f;
+  --color-moss-dark: #46523c;
+  --color-clay: #b8632f;
+  --color-stone: #d9d2c2;
+  --color-stone-light: #efeadc;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-moss: var(--color-moss);
+  --color-moss-dark: var(--color-moss-dark);
+  --color-clay: var(--color-clay);
+  --color-stone: var(--color-stone);
+  --color-stone-light: var(--color-stone-light);
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
