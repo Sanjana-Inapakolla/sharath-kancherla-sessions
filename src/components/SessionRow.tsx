@@ -1,55 +1,3 @@
-// "use client";
-
-// import * as Icons from "lucide-react";
-// import type { LucideIcon } from "lucide-react";
-// import { ExternalLink } from "lucide-react";
-// import type { Session } from "@/types/session";
-
-// export default function SessionRow({ session }: { session: Session }) {
-// //   const Icon = (Icons[session.icon as keyof typeof Icons] ??
-// //     Icons.Sparkles) as LucideIcon;
-
-//   const meta = [session.duration, session.format, session.mode]
-//     .filter(Boolean)
-//     .join(" · ");
-
-//   return (
-//     <div
-//       id={session.id}
-//       className="flex flex-col gap-4 border-t border-stone py-6 first:border-t-0 sm:flex-row sm:items-center sm:justify-between"
-//     >
-//       <div className="flex items-start gap-4">
-//         {/* <Icon
-//           className="mt-0.5 h-6 w-6 shrink-0 text-moss"
-//           aria-hidden="true"
-//         /> */}
-
-//         <div>
-//           <h3 className="font-medium text-ink">{session.name}</h3>
-
-//           <p className="mt-1 text-sm text-ink-soft">{session.description}</p>
-
-//           {meta && (
-//             <p className="mt-2 text-xs uppercase tracking-wide text-ink-soft/80">
-//               {meta}
-//             </p>
-//           )}
-//         </div>
-//       </div>
-
-//       <a
-//         href={session.formUrl}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="flex shrink-0 items-center justify-center gap-2 self-start rounded border border-clay px-5 py-2.5 text-sm font-medium text-clay transition-colors hover:bg-clay hover:text-paper sm:self-auto"
-//       >
-//         Register
-//         <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-//       </a>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -101,7 +49,6 @@ export default function SessionRow({ session }: { session: Session }) {
           )}
         </div>
 
-      
         <a
           href={session.formUrl}
           target="_blank"
@@ -113,7 +60,6 @@ export default function SessionRow({ session }: { session: Session }) {
         </a>
       </div>
 
-    
       {session.additionalInfo && (
         <div
           id={panelId}

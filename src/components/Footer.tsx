@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Container from "@/components/ui/Container";
 
 export default function Footer() {
@@ -19,6 +19,16 @@ export default function Footer() {
             className="text-ink-soft transition-colors hover:text-ink"
           >
             <FaInstagram className="h-5 w-5" />
+          </a>
+
+          <a
+            href="https://youtube.com/@sharathkancherla?si=d8kXq71Z1eJ0e18K"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Youtube"
+            className="text-ink-soft transition-colors hover:text-ink"
+          >
+            <FaYoutube className="h-5 w-5" />
           </a>
 
           <a

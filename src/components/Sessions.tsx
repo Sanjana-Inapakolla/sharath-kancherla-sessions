@@ -10,7 +10,7 @@ export default function Sessions() {
           Sessions
         </p>
         <h2 className="font-display text-2xl font-medium text-ink sm:text-3xl">
-          Choose a practice
+          Choose a Session
         </h2>
 
         <div className="mt-8">
