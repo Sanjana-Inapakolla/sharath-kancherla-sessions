@@ -24,7 +24,7 @@ const tabsConfig: TabConfig[] = [
     subLabel: "CST, Rakkenho & Sound Therapy",
     explanation:
       "Physical and emotional restoration through gentle touch, traditional Japanese rhythmic foot pressure, and sound frequency therapy. Designed to regulate the nervous system, release deeply held physical trauma, and guide the body into deep relaxation.",
-    formUrl: "https://forms.gle/REPLACE_WITH_CST_FORM",
+    formUrl: "https://forms.gle/REPLACE_WITH_THERAPY_FORM", // Unified Therapy Form
     buttonText: "Register for Therapy Sessions",
   },
   {
@@ -33,8 +33,8 @@ const tabsConfig: TabConfig[] = [
     subLabel: "Astrology & Palmistry Readings",
     explanation:
       "Timeless planetary charts, hand structures, and questions-based horary analysis to map life paths, relationships, and health tendencies. These consultations offer deep, customized insights and guidance without requiring complex details.",
-    formUrl: "https://forms.gle/REPLACE_WITH_CST_FORM",
-    buttonText: "Book a Consultation",
+    formUrl: "https://forms.gle/REPLACE_WITH_CONSULTATION_FORM", // Unified Consultation Form
+    buttonText: "Book a 1-on-1 Consultation",
   },
   {
     id: "classes_workshops",
@@ -42,7 +42,7 @@ const tabsConfig: TabConfig[] = [
     subLabel: "Music, NLP & Lifestyle Coaching",
     explanation:
       "Accelerated growth programs featuring Carnatic vocal training, Neuro-Linguistic programming (NLP) subconscious habit adjustments, and a comprehensive nutrition course to help you cultivate balance, energy, and mental agility.",
-    formUrl: "https://forms.gle/REPLACE_WITH_CST_FORM",
+    formUrl: "https://forms.gle/REPLACE_WITH_WORKSHOPS_FORM", // Unified Workshops Form
     buttonText: "Register for Classes & Workshops",
   },
 ];
@@ -51,15 +51,14 @@ export default function Sessions() {
   const [activeTab, setActiveTab] = useState<CategoryType>("therapy");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  // Find active tab configuration
-  const activeTabConfig = tabsConfig.find((tab) => tab.id === activeTab)!;
-
   // Filter sessions corresponding to active tab
   const activeSessions = sessions.filter((session) => {
     if (activeTab === "therapy") return session.category === "therapy";
     if (activeTab === "consultation") return session.category === "consultation";
     return session.category === "class" || session.category === "workshop";
   });
+
+  const activeTabConfig = tabsConfig.find((tab) => tab.id === activeTab)!;
 
   return (
     <section id="sessions" className="border-t border-stone py-24 sm:py-32 bg-paper">
@@ -73,7 +72,7 @@ export default function Sessions() {
             Choose Your <span className="font-serif italic font-normal">Pathway</span>
           </h2>
           <p className="mt-4 max-w-prose text-xs sm:text-sm text-ink-soft leading-relaxed">
-            Select a category tab to view and register for therapies, consultations, or transformative workshops.
+            Select a category tab below. Hover over any session card to reveal its details and focus your selection.
           </p>
         </div>
 
@@ -118,7 +117,7 @@ export default function Sessions() {
         {/* Sessions Cards Grid */}
         <div className="mt-12">
           <div
-            className={`grid grid-cols-1 gap-8 ${
+            className={`grid grid-cols-1 gap-8 transition-all duration-300 ${
               activeTab === "consultation"
                 ? "md:grid-cols-2 lg:grid-cols-4"
                 : "md:grid-cols-2 lg:grid-cols-3"
@@ -156,7 +155,7 @@ export default function Sessions() {
             href={activeTabConfig.formUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 bg-ink text-paper px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 rounded-none border border-ink shadow-md"
+            className="group flex items-center justify-center gap-2.5 bg-ink text-paper px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 rounded-none border border-ink shadow-md"
           >
             {activeTabConfig.buttonText}
             <ExternalLink className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
