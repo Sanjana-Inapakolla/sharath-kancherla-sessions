@@ -108,19 +108,6 @@ export default function SessionCard({
           </div>
         )}
       </div>
-
-      {/* Button CTA */}
-      <div className="mt-8 pt-4 border-t border-stone/50">
-        <a
-          href={session.formUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full bg-ink text-paper py-3 text-xs uppercase tracking-widest font-semibold transition-all duration-200 hover:bg-zinc-800 rounded-none border border-ink"
-        >
-          Register
-          <ExternalLink className="h-3 w-3" aria-hidden="true" />
-        </a>
-      </div>
     </div>
   );
 }

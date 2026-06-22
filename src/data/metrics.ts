@@ -16,7 +16,7 @@ export const metrics: Metric[] = [
   {
     id: "states-india",
     value: 8,
-    suffix: "",
+    suffix: "+",
     label: "States in India",
   },
   {
@@ -25,6 +25,12 @@ export const metrics: Metric[] = [
     suffix: " Lakh+",
     label: "People touched",
     isDecimal: true,
+  },
+  {
+    id: "it-employees",
+    value: 30000,
+    suffix: "+",
+    label: "IT employees trained",
   },
   {
     id: "satsangs",

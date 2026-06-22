@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     "Explore 1-on-1 sessions and workshops in CranioSacral Therapy, Rakkenho, Music Therapy, Vedic Astrology, and NLP by Sharath Chandra Kancherla.",
   icons: {
-    icon: "/images/profile-hero.jpg",
-    apple: "/images/profile-hero.jpg",
+    icon: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2",
   },
   openGraph: {
     title: "Sharath Chandra Kancherla | Holistic Well-being & Healing",

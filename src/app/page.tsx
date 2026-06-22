@@ -5,6 +5,8 @@ import Sessions from "@/components/Sessions";
 import Contact from "@/components/Contact";
 import Metrics from "@/components/Metrics";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Home() {
   return (
@@ -12,12 +14,25 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Sessions />
-        <Metrics />
-        <Contact />
+        
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <Sessions />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <Metrics />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

@@ -59,9 +59,6 @@ export default function MetricCard({ metric }: { metric: Metric }) {
       ref={cardRef}
       className="flex w-64 shrink-0 flex-col items-center justify-center text-center gap-3 rounded-none border border-stone bg-paper p-8 sm:w-72 transition-all duration-300 hover:border-ink hover:shadow-sm"
     >
-      <span className="font-mono text-[9px] uppercase tracking-widest text-ink-soft/70">
-        Stat
-      </span>
       <p className="font-display text-4xl font-medium tracking-tight text-ink sm:text-5xl">
         {formattedValue}
         <span className="font-serif italic font-light">{metric.suffix}</span>
