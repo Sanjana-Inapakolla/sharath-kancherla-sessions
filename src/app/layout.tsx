@@ -12,20 +12,23 @@ const fraunces = Fraunces({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
 });
 
-// METADATA 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
-  title: "Sharath Chandra Kancherla | Music Therapy, Rakheno & CST Sessions",
+  metadataBase: new URL("https://sharathkancherla.com"),
+  title: "Sharath Chandra Kancherla | Healing, Wisdom & Holistic Wellness",
   description:
-    "Book a music therapy, Rakheno, or craniosacral therapy (CST) session with Sharath Kancherla.",
+    "Explore 1-on-1 sessions and workshops in CranioSacral Therapy, Rakkenho, Music Therapy, Vedic Astrology, and NLP by Sharath Chandra Kancherla.",
+  icons: {
+    icon: "/images/profile-hero.jpg",
+    apple: "/images/profile-hero.jpg",
+  },
   openGraph: {
-    title: "Sharath Kancherla | Therapy Sessions",
+    title: "Sharath Chandra Kancherla | Holistic Well-being & Healing",
     description:
-      "Book a music therapy, Rakheno, or craniosacral therapy (CST) session.",
-    images: ["/images/og-image.jpg"],
+      "Transformative sessions in CST, Rakkenho, Music Therapy, Vedic Astrology, and NLP.",
+    images: ["/images/profile-hero.jpg"],
     type: "website",
   },
 };

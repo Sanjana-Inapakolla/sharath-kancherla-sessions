@@ -1,5 +1,5 @@
 export type Session = {
-  /* unique identifier for every session type (music-therapy) */
+  /* unique identifier for every session type (e.g., cst, music-therapy) */
   id: string;
 
   /* display name of every session */
@@ -22,4 +22,10 @@ export type Session = {
 
   /* In-person or Online */
   mode?: string;
+
+  /* Section category for tabs filtering */
+  category?: 'therapy' | 'consultation' | 'class' | 'workshop';
+
+  /* Custom details such as Level options or class frequency */
+  subDetails?: string;
 };

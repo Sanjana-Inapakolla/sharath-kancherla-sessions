@@ -3,20 +3,19 @@ import Container from "@/components/ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-stone bg-stone-light">
-      <Container className="flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
-        <p className="text-xs text-ink-soft">
-          &copy; {new Date().getFullYear()} Sharath Kancherla &middot;
-          Hyderabad, India
+    <footer className="border-t border-stone bg-paper">
+      <Container className="flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
+        <p className="text-xs tracking-wider uppercase text-ink-soft/80">
+          &copy; {new Date().getFullYear()} Sharath Chandra Kancherla &middot; Hyderabad, India
         </p>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <a
             href="https://www.instagram.com/sharathkancherla?igsh=MWtvZXI1a3czbzdlYg=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-ink-soft transition-colors hover:text-ink"
+            className="text-ink-soft hover:text-ink transition-colors duration-200"
           >
             <FaInstagram className="h-5 w-5" />
           </a>
@@ -26,7 +25,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Youtube"
-            className="text-ink-soft transition-colors hover:text-ink"
+            className="text-ink-soft hover:text-ink transition-colors duration-200"
           >
             <FaYoutube className="h-5 w-5" />
           </a>
@@ -36,7 +35,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-ink-soft transition-colors hover:text-ink"
+            className="text-ink-soft hover:text-ink transition-colors duration-200"
           >
             <FaLinkedin className="h-5 w-5" />
           </a>

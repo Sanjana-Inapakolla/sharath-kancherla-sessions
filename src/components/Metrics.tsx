@@ -4,22 +4,33 @@ import { metrics } from "@/data/metrics";
 
 export default function Metrics() {
   return (
-    <section className="border-t border-stone py-16 sm:py-20">
+    <section className="border-t border-stone py-20 sm:py-28 bg-paper overflow-hidden">
       <Container>
-        <p className="mb-2 text-xs font-medium uppercase tracking-[0.14em] text-moss">
-          Reach
-        </p>
-        <h2 className="font-display text-2xl font-medium text-ink sm:text-3xl">
-          Over the years
-        </h2>
+        <div className="flex flex-col items-center text-center mb-12">
+          <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-ink-soft bg-stone-light px-3 py-1 rounded">
+            Our Reach
+          </span>
+          <h2 className="mt-4 font-display text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+            Over a Decade of <span className="font-serif italic font-normal">Impact</span>
+          </h2>
+          <p className="mt-4 max-w-prose text-xs sm:text-sm text-ink-soft leading-relaxed">
+            A reflection of healing journeys, wisdom shared, and lives uplifted across borders. Hover over the scrolling track to pause.
+          </p>
+        </div>
       </Container>
 
-      <div className="mt-8 flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scroll-smooth sm:px-8 lg:px-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {metrics.map((metric) => (
-          <MetricCard key={metric.id} metric={metric} />
-        ))}
-
-        <div className="w-2 shrink-0 sm:w-4" aria-hidden="true" />
+      {/* Infinite Marquee Scroll Track */}
+      <div className="relative mt-8 w-full overflow-hidden border-y border-stone py-8 bg-stone-light/30">
+        <div className="animate-marquee-scroll flex gap-6 px-3">
+          {/* First set */}
+          {metrics.map((metric, idx) => (
+            <MetricCard key={`${metric.id}-set1-${idx}`} metric={metric} />
+          ))}
+          {/* Second identical set for seamless looping */}
+          {metrics.map((metric, idx) => (
+            <MetricCard key={`${metric.id}-set2-${idx}`} metric={metric} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -2,27 +2,58 @@ import { Metric } from "@/types/metric";
 
 export const metrics: Metric[] = [
   {
-    id: "people-touched",
-    value: 55000,
-    suffix: "+",
-    label: "People touched",
-  },
-  {
     id: "years-experience",
-    value: 10,
+    value: 13,
     suffix: "+",
-    label: "Years experience",
-  },
-  {
-    id: "satsangs",
-    value: 50,
-    suffix: "+",
-    label: "Satsangs",
+    label: "Years of experience",
   },
   {
     id: "countries-reached",
     value: 10,
     suffix: "+",
     label: "Countries reached",
+  },
+  {
+    id: "states-india",
+    value: 8,
+    suffix: "",
+    label: "States in India",
+  },
+  {
+    id: "people-touched",
+    value: 1.5,
+    suffix: " Lakh+",
+    label: "People touched",
+    isDecimal: true,
+  },
+  {
+    id: "satsangs",
+    value: 1000,
+    suffix: "+",
+    label: "Satsangs done",
+  },
+  {
+    id: "music-students",
+    value: 100,
+    suffix: "+",
+    label: "Music students",
+  },
+  {
+    id: "cst-sessions",
+    value: 2000,
+    suffix: "+",
+    label: "CST sessions done",
+  },
+  {
+    id: "rakkenho-sessions",
+    value: 250,
+    suffix: "+",
+    label: "Rakkenho sessions done",
+  },
+  {
+    id: "music-therapy-sessions",
+    value: 300,
+    suffix: "+",
+    label: "Music therapy sessions",
   },
 ];
